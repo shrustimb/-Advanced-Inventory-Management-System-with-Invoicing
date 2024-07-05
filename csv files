@@ -1,0 +1,51 @@
+import csv
+import os
+
+def generate_sales_report(sales_list):
+    if not os.path.exists("reports"):
+        os.makedirs("reports")
+    with open("reports/sales_report.csv", "w", newline="") as csvfile:
+        fieldnames = ["transaction_id", "item_id", "quantity", "price", "date"]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for sale in sales_list:
+            writer.writerow({
+                "transaction_id": sale.transaction_id,
+                "item_id": sale.item_id,
+                "quantity": sale.quantity,
+                "price": sale.price,
+                "date": sale.date
+            })
+
+def generate_returns_report(returns_list):
+    if not os.path.exists("reports"):
+        os.makedirs("reports")
+    with open("reports/returns_report.csv", "w", newline="") as csvfile:
+        fieldnames = ["transaction_id", "item_id", "quantity", "price", "date", "reason"]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for return_txn in returns_list:
+            writer.writerow({
+                "transaction_id": return_txn.transaction_id,
+                "item_id": return_txn.item_id,
+                "quantity": return_txn.quantity,
+                "price": return_txn.price,
+                "date": return_txn.date,
+                "reason": return_txn.reason
+            })
+
+# After recording sales and returns
+sales_list = [
+    Sale("1", "item1", 2, 10.0, "2023-07-04"),
+    Sale("2", "item2", 1, 15.0, "2023-07-05")
+]
+
+returns_list = [
+    Return("1", "item1", 1, 10.0, "2023-07-04", "Defective"),
+    Return("2", "item2", 1, 15.0, "2023-07-05", "Not as described")
+]
+
+# Generate reports
+generate_sales_report(sales_list)
+generate_returns_report(returns_list)
+
