@@ -1,0 +1,23 @@
+2024-07-05 12:29:13,632 - INFO - Added product: 1 (1) - $1.00 x 1
+2024-07-05 12:29:14,940 - WARNING - Invalid menu choice selected.
+2024-07-05 12:29:15,387 - WARNING - Invalid menu choice selected.
+2024-07-05 12:29:15,589 - WARNING - Invalid menu choice selected.
+2024-07-05 12:29:15,804 - WARNING - Invalid menu choice selected.
+2024-07-05 12:29:15,959 - WARNING - Invalid menu choice selected.
+2024-07-05 12:29:16,123 - WARNING - Invalid menu choice selected.
+2024-07-05 12:39:30,571 - INFO - Added product: Blouse (Cotton) - $500.00 x 1
+2024-07-05 12:40:01,386 - INFO - Updated product 1: Saree (Cotton) - $1000.00 x 2
+2024-07-05 12:40:41,165 - INFO - Recorded sale: Transaction ID: 1, Product ID: 1, Quantity: 1, Price: $1.00, Date: 2024-07-05 12:40:41
+2024-07-05 12:41:04,463 - ERROR - ValueError: could not convert string to float: ''. Please enter a valid input.
+Traceback (most recent call last):
+  File "C:\Users\om\Documents\Inventory Mangement System\python.py", line 149, in main
+    price = float(input("Enter product price: "))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: ''
+2024-07-05 12:41:27,417 - DEBUG - Final size summary of the biggest document sections:
+2024-07-05 12:41:27,417 - DEBUG - - pages: 335.0B
+2024-07-05 12:41:27,418 - DEBUG - - fonts: 97.0B
+2024-07-05 12:41:27,420 - INFO - Generated invoice: invoice_1.pdf
+2024-07-05 12:41:27,621 - WARNING - Invalid menu choice selected.
+2024-07-05 12:41:35,240 - WARNING - Invalid menu choice selected.
+2024-07-05 12:43:49,642 - INFO - Added product: Blouse (Womens clohting) - $30.00 x 50
